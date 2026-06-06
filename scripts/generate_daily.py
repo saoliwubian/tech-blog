@@ -1,7 +1,8 @@
 """
-TechPulse AI Daily Report Generator
+TechPulse 科技日报 Generator
 ====================================
-Runs in GitHub Actions to automatically generate AI industry daily reports.
+Runs in GitHub Actions to automatically generate tech industry daily reports.
+Covers: AI, Frontend, Cloud Computing, Programming Languages, Open Source, etc.
 
 Usage:
   python scripts/generate_daily.py
@@ -42,15 +43,25 @@ LLM_API_KEY = os.environ.get("LLM_API_KEY", "")
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "") or "https://api.deepseek.com"
 LLM_MODEL = os.environ.get("LLM_MODEL", "") or "deepseek-chat"
 
-# RSS Feed Sources
+# RSS Feed Sources — Broad tech coverage
 RSS_FEEDS = [
+    # AI / Machine Learning
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
     "https://huggingface.co/blog/feed.xml",
-    "https://feeds.feedburner.com/TheHackersNews",
-    "https://www.technologyreview.com/feed/",
-    "https://arstechnica.com/feed/",
     "https://venturebeat.com/category/ai/feed/",
+    # Frontend / Web Dev
+    "https://web.dev/feed.xml",
+    "https://blog.jquery.com/feed/",
+    # Cloud / DevOps
+    "https://aws.amazon.com/blogs/aws/feed/",
+    "https://cloud.google.com/blog/feed",
+    "https://kubernetes.io/feed.xml",
+    # General Tech
+    "https://arstechnica.com/feed/",
+    "https://www.technologyreview.com/feed/",
+    "https://feeds.feedburner.com/TheHackersNews",
+    "https://github.blog/feed/",
 ]
 
 # ─── Helpers ──────────────────────────────────────────────────────────────
@@ -167,7 +178,9 @@ def generate_report(articles: list[dict]) -> dict:
         for i, a in enumerate(articles)
     )
 
-    system_prompt = """你是 TechPulse AI 日报编辑。你需要根据提供的 AI 行业新闻素材，生成结构化的日报内容。
+    system_prompt = """你是 TechPulse 科技日报编辑。你需要根据提供的科技新闻素材，生成结构化的日报内容。
+
+日报覆盖以下领域：AI/大模型、前端开发、云计算/DevOps、编程语言/开源、芯片/硬件、科技产业动态等。
 
 输出格式为严格 JSON，不要包含任何其他文本。JSON 结构如下：
 
@@ -205,20 +218,21 @@ def generate_report(articles: list[dict]) -> dict:
 }
 
 要求：
-1. 头条选影响最大的 1 条
-2. 重点分析 3-6 条（优先选择有具体数据和技术细节的）
+1. 头条选影响最大的 1 条（不限 AI，可以是前端、云、编程语言等任何领域）
+2. 重点分析 3-6 条（优先选择有具体数据和技术细节的，覆盖不同领域）
 3. 速览 2-4 条
 4. 生成 1-2 张 Mermaid 图表（柱状图用 xychart-beta，饼图用 pie，流程图用 flowchart）
 5. 所有内容必须基于提供的素材，不得编造
 6. 中文输出，技术术语保留英文
 7. 如果素材不足，分析可以少放，但头条必须有
-8. impact 只能是 high/medium/low"""
+8. impact 只能是 high/medium/low
+9. 尽量让分析条目覆盖不同技术领域（AI、前端、云、编程语言等），不要集中在单一领域"""
 
-    user_prompt = f"""今天是 {DATE_STR}，以下是今天收集到的 AI 行业新闻素材：
+    user_prompt = f"""今天是 {DATE_STR}，以下是今天收集到的科技新闻素材（涵盖 AI、前端、云计算、编程语言、开源等领域）：
 
 {articles_text}
 
-请生成今天的 AI 行业日报。"""
+请生成今天的科技日报。"""
 
     response = call_llm(system_prompt, user_prompt, max_tokens=4096)
 
@@ -396,16 +410,16 @@ def render_html(report: dict, issue_number: int) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI 日报 {DATE_STR} — TechPulse</title>
-  <meta name="description" content="{DATE_STR} AI 行业资讯日报：{hl['title']}" />
+  <title>科技日报 {DATE_STR} — TechPulse</title>
+  <meta name="description" content="{DATE_STR} 科技资讯日报：{hl['title']}" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="masthead">
-      <div class="masthead-title">TechPulse AI Daily</div>
-      <div class="masthead-subtitle">AI 行业资讯日报</div>
+      <div class="masthead-title">TechPulse Tech Daily</div>
+      <div class="masthead-subtitle">科技资讯日报</div>
       <div class="masthead-meta">
         <span class="masthead-edition">第 {issue_number:03d} 期</span>
         <span>{YEAR} 年 {MONTH_DAY} · 星期{WEEKDAY}</span>
@@ -504,7 +518,7 @@ def update_index(headline_title: str, analysis_count: int, quick_count: int, viz
 # ─── Main ─────────────────────────────────────────────────────────────────
 
 def main():
-    print(f"=== TechPulse AI Daily Report Generator ===")
+    print(f"=== TechPulse 科技日报 Generator ===")
     print(f"Date: {DATE_STR} (星期{WEEKDAY})")
     print()
 
