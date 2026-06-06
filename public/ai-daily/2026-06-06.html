@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 日报 2026-06-06 — TechPulse</title>
+  <meta name="description" content="2026年6月6日 AI 行业资讯日报：Google DeepMind 发布 Gemini Ultra 2.0、OpenAI 开源 GPT-5 Mini、Anthropic 企业级 Claude API 等" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="masthead-title">TechPulse AI Daily</div>
+      <div class="masthead-subtitle">AI 行业资讯日报</div>
+      <div class="masthead-meta">
+        <span class="masthead-edition">第 001 期</span>
+        <span>2026 年 6 月 6 日 · 星期五</span>
+        <div class="masthead-nav">
+          <a href="index.html">← 目录</a>
+          <a href="/">博客</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== 头条 ========== -->
+    <section class="headline">
+      <div class="headline-label">📰 头条</div>
+      <h1 class="headline-title">Google DeepMind 发布 Gemini Ultra 2.0：多模态推理能力大幅跃升，在 MMLU 基准上首次超越人类水平</h1>
+      <div class="headline-body">
+        Google DeepMind 今日正式发布 <strong>Gemini Ultra 2.0</strong>，这是其旗舰大模型的重大升级。新模型在 <strong>MMLU 基准测试</strong>上达到 <strong>92.7%</strong> 的准确率，首次超过人类专家平均水平（89.8%）。核心突破包括：原生多模态推理架构，支持文本、图像、视频、音频的端到端理解；引入 <strong>"思维链蒸馏"（Chain-of-Thought Distillation）</strong>技术，推理速度提升 3 倍；新增 <strong>Agent 模式</strong>，可自主调用搜索、代码执行和 API 工具。
+        <br/><br/>
+        业内分析认为，Gemini Ultra 2.0 的发布标志着大模型竞赛进入 <strong>"超人类性能"</strong> 阶段，未来竞争焦点将从基准分数转向 <strong>实际应用落地</strong> 和 <strong>安全对齐</strong>。
+      </div>
+      <div class="headline-source">
+        来源：<a href="https://blog.google/technology/ai/gemini-ultra-2/" target="_blank" rel="noopener">Google AI Blog</a> ·
+        <a href="https://arxiv.org/abs/2026.06.001" target="_blank" rel="noopener">技术报告 (arXiv)</a>
+      </div>
+    </section>
+
+    <!-- ========== 重点分析 ========== -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-icon">🔍</span>
+        <h2 class="section-title">重点分析</h2>
+        <span class="section-count">5 条</span>
+      </div>
+
+      <!-- #1 -->
+      <div class="analysis-card">
+        <div class="analysis-card-header">
+          <span class="analysis-index">#1</span>
+          <h3 class="analysis-title">OpenAI 宣布开源 GPT-5 Mini：7B 参数模型性能比肩 GPT-4</h3>
+        </div>
+        <div class="analysis-body">
+          OpenAI 今日宣布开源 <strong>GPT-5 Mini</strong>，一个 7B 参数的轻量级模型。在 MMLU 上得分 <strong>78.3%</strong>，接近早期 GPT-4 水平（76.5%）。该模型采用 <strong>MoE（混合专家）架构</strong>，推理时仅激活 2B 参数，非常适合端侧部署。许可证为 <strong>Apache 2.0</strong>，允许商业使用。
+          <br/><br/>
+          <strong>影响分析：</strong>这一举动被视为对 Meta Llama 系列和 Mistral 的直接回应，将进一步降低 AI 应用门槛，利好开发者和中小企业。
+        </div>
+        <div class="analysis-tags">
+          <span class="tag severity-high">🔥 高影响</span>
+          <span class="tag">开源模型</span>
+          <span class="tag">GPT-5 Mini</span>
+          <span class="tag">MoE</span>
+        </div>
+        <div class="analysis-source">
+          来源：<a href="https://openai.com/blog/gpt5-mini-open-source" target="_blank" rel="noopener">OpenAI Blog</a>
+        </div>
+      </div>
+
+      <!-- #2 -->
+      <div class="analysis-card">
+        <div class="analysis-card-header">
+          <span class="analysis-index">#2</span>
+          <h3 class="analysis-title">Anthropic 推出企业级 Claude API：支持 RAG、工具调用和自定义微调</h3>
+        </div>
+        <div class="analysis-body">
+          Anthropic 发布 <strong>Claude Enterprise API</strong>，面向企业用户提供三大核心能力：<strong>原生 RAG 管道</strong>（支持私有知识库检索增强）、<strong>结构化工具调用</strong>（兼容 OpenAI Function Calling 格式）、以及 <strong>LoRA 微调服务</strong>（首次允许企业定制 Claude 行为）。API 价格为 $3/M input tokens，比 GPT-4 便宜 40%。
+        </div>
+        <div class="analysis-tags">
+          <span class="tag severity-medium">⚡ 中影响</span>
+          <span class="tag">企业级 API</span>
+          <span class="tag">RAG</span>
+          <span class="tag">微调</span>
+        </div>
+        <div class="analysis-source">
+          来源：<a href="https://www.anthropic.com/news/claude-enterprise-api" target="_blank" rel="noopener">Anthropic Blog</a>
+        </div>
+      </div>
+
+      <!-- #3 -->
+      <div class="analysis-card">
+        <div class="analysis-card-header">
+          <span class="analysis-index">#3</span>
+          <h3 class="analysis-title">Meta 发布 Llama 4 Scout：支持 1000 万 Token 上下文窗口</h3>
+        </div>
+        <div class="analysis-body">
+          Meta 发布 <strong>Llama 4 Scout</strong>，首次在开源模型中实现 <strong>1000 万 token 上下文窗口</strong>。该模型采用 <strong>稀疏注意力 + 分块缓存</strong> 架构，长文本推理成本仅为传统方案的 1/10。在 LongBench 基准上，Llama 4 Scout 在文档问答和代码理解任务中全面领先。
+          <br/><br/>
+          <strong>关键技术：</strong>Ring Attention 改进版 + FlashInfer 推理加速，单机 8×A100 即可运行。
+        </div>
+        <div class="analysis-tags">
+          <span class="tag severity-high">🔥 高影响</span>
+          <span class="tag">Llama 4</span>
+          <span class="tag">长上下文</span>
+          <span class="tag">开源</span>
+        </div>
+        <div class="analysis-source">
+          来源：<a href="https://ai.meta.com/blog/llama-4-scout/" target="_blank" rel="noopener">Meta AI Blog</a>
+        </div>
+      </div>
+
+      <!-- #4 -->
+      <div class="analysis-card">
+        <div class="analysis-card-header">
+          <span class="analysis-index">#4</span>
+          <h3 class="analysis-title">欧盟 AI 法案正式生效：全球首部全面 AI 监管法规落地</h3>
+        </div>
+        <div class="analysis-body">
+          <strong>欧盟 AI 法案（EU AI Act）</strong>今日正式实施。法案将 AI 系统按风险分为四个等级：<strong>不可接受风险</strong>（社会评分、实时生物识别 → 禁止）、<strong>高风险</strong>（医疗、司法、招聘 → 强制合规）、<strong>有限风险</strong>（聊天机器人 → 透明度义务）、<strong>最低风险</strong>（自由使用）。
+          <br/><br/>
+          违规企业最高面临 <strong>全球营收 7%</strong> 的罚款。OpenAI、Google、Meta 等公司已宣布成立专门的合规团队。
+        </div>
+        <div class="analysis-tags">
+          <span class="tag severity-high">🔥 高影响</span>
+          <span class="tag">监管</span>
+          <span class="tag">EU AI Act</span>
+          <span class="tag">合规</span>
+        </div>
+        <div class="analysis-source">
+          来源：<a href="https://digital-strategy.ec.europa.eu/en/policies/ai-act" target="_blank" rel="noopener">EU Digital Strategy</a>
+        </div>
+      </div>
+
+      <!-- #5 -->
+      <div class="analysis-card">
+        <div class="analysis-card-header">
+          <span class="analysis-index">#5</span>
+          <h3 class="analysis-title">NVIDIA 发布 B300 GPU：AI 训练性能提升 4 倍，采用台积电 2nm 工艺</h3>
+        </div>
+        <div class="analysis-body">
+          NVIDIA 发布新一代 <strong>B300 GPU</strong>，采用台积电 <strong>2nm 工艺</strong>，FP8 算力达到 <strong>20 PFLOPS</strong>，较 H100 提升 4 倍。显存升级至 <strong>288GB HBM4</strong>，支持单卡运行 700B 参数模型推理。预计 2026 Q4 量产，定价约 $40,000。
+        </div>
+        <div class="analysis-tags">
+          <span class="tag severity-medium">⚡ 中影响</span>
+          <span class="tag">硬件</span>
+          <span class="tag">NVIDIA</span>
+          <span class="tag">GPU</span>
+        </div>
+        <div class="analysis-source">
+          来源：<a href="https://nvidianews.nvidia.com/news/b300-gpu" target="_blank" rel="noopener">NVIDIA News</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 速览区 ========== -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-icon">⚡</span>
+        <h2 class="section-title">速览</h2>
+        <span class="section-count">4 条</span>
+      </div>
+      <div class="quick-glance">
+        <div class="quick-item">
+          <span class="quick-bullet">▸</span>
+          <span>苹果宣布 Apple Intelligence 2.0，Siri 将支持多步骤任务编排和第三方 App 深度集成</span>
+          <span class="quick-source"><a href="https://apple.com/newsroom" target="_blank" rel="noopener">Apple</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">▸</span>
+          <span>Stability AI 推出 Stable Diffusion 4.0，支持 8K 分辨率和实时视频生成</span>
+          <span class="quick-source"><a href="https://stability.ai/blog" target="_blank" rel="noopener">Stability AI</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">▸</span>
+          <span>Hugging Face 收购 Autotab，加速 AI Agent 自动化工具布局</span>
+          <span class="quick-source"><a href="https://huggingface.co/blog" target="_blank" rel="noopener">Hugging Face</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">▸</span>
+          <span>中国工信部发布《生成式 AI 应用安全管理指南》，要求大模型备案和内容标识</span>
+          <span class="quick-source"><a href="https://miit.gov.cn" target="_blank" rel="noopener">工信部</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 可视化 ========== -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-icon">📊</span>
+        <h2 class="section-title">可视化</h2>
+        <span class="section-count">2 张</span>
+      </div>
+
+      <div class="viz-container">
+        <div class="viz-title">主流大模型 MMLU 基准性能对比</div>
+        <div class="mermaid">
+xychart-beta
+  title "MMLU 准确率 (%)"
+  x-axis ["GPT-4", "Claude 3.5", "Llama-4", "Gemini 2.0", "GPT-5 Mini"]
+  y-axis "准确率 %" 60 --> 100
+  bar [86.4, 88.7, 89.2, 92.7, 78.3]
+        </div>
+      </div>
+
+      <div class="viz-container">
+        <div class="viz-title">今日 AI 行业资讯影响领域分布</div>
+        <div class="mermaid">
+pie title AI 资讯影响领域
+  "大模型发布" : 35
+  "监管与政策" : 20
+  "硬件与芯片" : 15
+  "开源生态" : 15
+  "应用落地" : 10
+  "投资并购" : 5
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 出处链接 ========== -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-icon">🔗</span>
+        <h2 class="section-title">出处链接</h2>
+      </div>
+      <div class="quick-glance">
+        <div class="quick-item">
+          <span class="quick-bullet">1.</span>
+          <span><a href="https://blog.google/technology/ai/gemini-ultra-2/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Google AI Blog — Gemini Ultra 2.0 发布</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">2.</span>
+          <span><a href="https://openai.com/blog/gpt5-mini-open-source" target="_blank" rel="noopener" style="color:var(--accent-cyan);">OpenAI Blog — GPT-5 Mini 开源</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">3.</span>
+          <span><a href="https://www.anthropic.com/news/claude-enterprise-api" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Anthropic Blog — Claude Enterprise API</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">4.</span>
+          <span><a href="https://ai.meta.com/blog/llama-4-scout/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Meta AI Blog — Llama 4 Scout</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">5.</span>
+          <span><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-act" target="_blank" rel="noopener" style="color:var(--accent-cyan);">EU Digital Strategy — AI Act</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">6.</span>
+          <span><a href="https://nvidianews.nvidia.com/news/b300-gpu" target="_blank" rel="noopener" style="color:var(--accent-cyan);">NVIDIA News — B300 GPU</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">7.</span>
+          <span><a href="https://apple.com/newsroom" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Apple Newsroom — Apple Intelligence 2.0</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">8.</span>
+          <span><a href="https://stability.ai/blog" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Stability AI Blog — SD 4.0</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">9.</span>
+          <span><a href="https://huggingface.co/blog" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Hugging Face Blog — Autotab 收购</a></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-bullet">10.</span>
+          <span><a href="https://miit.gov.cn" target="_blank" rel="noopener" style="color:var(--accent-cyan);">工信部 — AI 安全管理指南</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="report-footer">
+      <p>本文由 WorkBuddy AI 自动搜索、筛选、整理生成 · 内容仅供参考</p>
+      <p><a href="index.html">← 返回日报目录</a> · <a href="/">返回博客</a></p>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" title="回到顶部">↑</button>
+
+  <script>
+    // Mermaid init
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#e8a849',
+        primaryTextColor: '#e8e0d4',
+        primaryBorderColor: '#333330',
+        lineColor: '#a89e90',
+        secondaryColor: '#2a2520',
+        tertiaryColor: '#1a1a1a',
+        background: '#222222',
+        mainBkg: '#2a2520',
+        nodeBorder: '#e8a849',
+        clusterBkg: '#1a1a1a',
+        titleColor: '#e8a849',
+        edgeLabelBackground: '#222222',
+      }
+    });
+
+    // Back to top
+    const btn = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

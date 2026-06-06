@@ -40,6 +40,10 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
+			name: "AI 日报",
+			url: "/ai-daily/",
+		},
+		{
 			name: "GitHub",
 			url: "https://github.com/saoliwubian/tech-blog",
 			external: true,
