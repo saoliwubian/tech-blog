@@ -1,0 +1,55 @@
+---
+// Giscus 评论组件 - 基于 GitHub Discussions
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+
+// Giscus 配置
+// 请替换为你自己的 GitHub 仓库信息
+const GISCUS_REPO = "saoliwubian/tech-blog";
+const GISCUS_REPO_ID = "";  // 需要填入实际的 repo ID
+const GISCUS_CATEGORY = "Announcements";
+const GISCUS_CATEGORY_ID = ""; // 需要填入实际的 category ID
+---
+
+<div class:list={["giscus-container", className]}>
+  <div class="giscus"></div>
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo={GISCUS_REPO}
+    data-repo-id={GISCUS_REPO_ID}
+    data-category={GISCUS_CATEGORY}
+    data-category-id={GISCUS_CATEGORY_ID}
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
+
+<style>
+  .giscus-container {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--card-bg);
+  }
+
+  .giscus-container :global(.giscus) {
+    max-width: 100%;
+  }
+
+  /* 适配深色模式 */
+  .giscus-container :global(.giscus-frame) {
+    width: 100%;
+    border: none;
+  }
+</style>

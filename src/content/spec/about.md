@@ -1,26 +1,14 @@
 # 关于 TechPulse
 
-## 👋 欢迎来到科技脉搏
+TechPulse 是一个专注于前沿科技的深度博客，我们关注以下领域：
 
-**TechPulse** 是一个专注于前沿科技的个人博客，致力于追踪和解读最新的技术趋势。
+- **人工智能** — 大语言模型、计算机视觉、AI 应用落地
+- **Web 开发** — 前端框架、全栈工程、性能优化
+- **云计算与 DevOps** — 云原生、容器化、CI/CD 实践
+- **开源技术** — 开源项目解读、贡献指南、社区动态
 
-我们的内容涵盖但不限于：
+::github{repo="saoliwubian/tech-blog"}
 
-- 🤖 **人工智能与机器学习** — LLM、Agent、RAG、AI 工程化
-- ☁️ **云计算与基础设施** — Serverless、Kubernetes、边缘计算
-- 🖥️ **前端工程化** — React/Vue/Astro 生态、构建工具链、Web 性能优化
-- 🦀 **系统编程** — Rust、Go 在基础设施中的应用
-- 📐 **架构设计** — 分布式系统、微服务、领域驱动设计
-
-## 📝 写作理念
-
-技术博客不只是知识的搬运工。每一篇文章都力求：
-
-1. **深度优先** — 不只是"怎么做"，更讲清楚"为什么"
-2. **实战验证** — 所有代码示例都经过本地运行验证
-3. **持续更新** — 技术发展日新月异，文章会持续维护
-
-## 🔗 联系作者
-
-- GitHub: [@saoliwubian](https://github.com/saoliwubian)
-- 欢迎通过 GitHub Issues 对文章内容提出讨论和建议
+> ### 联系我们
+> - GitHub: [saoliwubian/tech-blog](https://github.com/saoliwubian/tech-blog)
+> - 欢迎通过 Issue 或 PR 参与讨论和贡献

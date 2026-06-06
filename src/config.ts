@@ -8,16 +8,16 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "TechPulse 科技脉搏",
-	subtitle: "探索前沿技术，洞察数字未来",
+	title: "TechPulse",
+	subtitle: "探索科技前沿 · 洞察数字未来",
 	lang: "zh_CN",
 	themeColor: {
-		hue: 210, // 科技蓝
+		hue: 200, // 科技蓝，从0到360。红色:0, 青色:200, 蓝紫:250, 粉色:345
 		fixed: false,
 	},
 	banner: {
 		enable: true,
-		src: "assets/images/tech-banner.svg",
+		src: "assets/images/demo-banner.png",
 		position: "center",
 		credit: {
 			enable: false,
@@ -27,9 +27,11 @@ export const siteConfig: SiteConfig = {
 	},
 	toc: {
 		enable: true,
-		depth: 3,
+		depth: 2,
 	},
-	favicon: [],
+	favicon: [
+		// Leave this array empty to use the default favicon
+	],
 };
 
 export const navBarConfig: NavBarConfig = {
@@ -46,19 +48,19 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/tech-avatar.svg",
+	avatar: "assets/images/demo-avatar.png",
 	name: "TechPulse",
-	bio: "探索人工智能、云计算、前端开发与系统编程的前沿技术。用代码改变世界，用技术创造未来。",
+	bio: "专注于人工智能、Web 开发、云计算与开源技术的深度科技博客",
 	links: [
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/saoliwubian",
+			url: "https://github.com/saoliwubian/tech-blog",
 		},
 		{
-			name: "X",
-			icon: "fa6-brands:x-twitter",
-			url: "https://x.com",
+			name: "Twitter",
+			icon: "fa6-brands:twitter",
+			url: "https://twitter.com",
 		},
 		{
 			name: "RSS",

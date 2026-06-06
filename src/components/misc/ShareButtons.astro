@@ -1,0 +1,130 @@
+---
+// 社交分享按钮组件
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  url: string;
+  description?: string;
+  class?: string;
+}
+const { title, url, description = "", class: className = "" } = Astro.props;
+
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+const encodedDesc = encodeURIComponent(description);
+
+const shareLinks = [
+  {
+    name: "Twitter",
+    icon: "fa6-brands:twitter",
+    url: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+  },
+  {
+    name: "Facebook",
+    icon: "fa6-brands:facebook",
+    url: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+  },
+  {
+    name: "LinkedIn",
+    icon: "fa6-brands:linkedin",
+    url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+  },
+];
+---
+
+<div class:list={["share-container", className]}>
+  <div class="share-label">分享本文</div>
+  <div class="share-buttons">
+    {shareLinks.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="share-btn"
+        title={`分享到${link.name}`}
+        aria-label={`分享到${link.name}`}
+      >
+        <Icon name={link.icon} />
+      </a>
+    ))}
+    <button
+      class="share-btn copy-btn"
+      title="复制链接"
+      aria-label="复制链接"
+      data-url={url}
+    >
+      <Icon name="material-symbols:link-rounded" />
+    </button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const url = (btn as HTMLElement).dataset.url || window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = btn.getAttribute('title');
+        btn.setAttribute('title', '已复制!');
+        setTimeout(() => {
+          btn.setAttribute('title', original || '复制链接');
+        }, 2000);
+      } catch {
+        // fallback
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+      }
+    });
+  });
+</script>
+
+<style>
+  .share-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .share-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .share-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .share-btn:active {
+    transform: scale(0.95);
+  }
+</style>
