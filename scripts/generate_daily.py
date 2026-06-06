@@ -39,8 +39,8 @@ TEMPLATE_HTML = AI_DAILY_DIR / "2026-06-06.html"  # Use as template reference
 
 # LLM Config
 LLM_API_KEY = os.environ.get("LLM_API_KEY", "")
-LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.deepseek.com")
-LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-chat")
+LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "") or "https://api.deepseek.com"
+LLM_MODEL = os.environ.get("LLM_MODEL", "") or "deepseek-chat"
 
 # RSS Feed Sources
 RSS_FEEDS = [
