@@ -2,6 +2,8 @@
 
 > 探索科技前沿 · 洞察数字未来
 
+**🌐 在线访问：[https://saoliwubian.github.io/tech-blog/](https://saoliwubian.github.io/tech-blog/)**
+
 TechPulse 是一个专注于前沿科技的深度博客，基于 [Fuwari](https://github.com/saicaca/fuwari) 模板构建。
 
 ## 特性
