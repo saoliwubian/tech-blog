@@ -1,0 +1,32 @@
+---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+---
+
+<div class="card-base px-6 md:px-9 pt-6 pb-4 mt-4">
+    <div class="text-xl font-bold mb-4 text-black/80 dark:text-white/80">
+        {i18n(I18nKey.comments)}
+    </div>
+    <div class="giscus"></div>
+</div>
+
+<script is:inline>
+    (function () {
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.setAttribute("data-repo", "saoliwubian/tech-blog");
+        script.setAttribute("data-repo-id", "R_kgDO_REPLACE_ME");
+        script.setAttribute("data-category", "General");
+        script.setAttribute("data-category-id", "DIC_kwDO_REPLACE_ME");
+        script.setAttribute("data-mapping", "pathname");
+        script.setAttribute("data-strict", "0");
+        script.setAttribute("data-reactions-enabled", "1");
+        script.setAttribute("data-emit-metadata", "0");
+        script.setAttribute("data-input-position", "top");
+        script.setAttribute("data-theme", "preferred_color_scheme");
+        script.setAttribute("data-lang", "zh-CN");
+        script.setAttribute("crossorigin", "anonymous");
+        script.async = true;
+        document.querySelector(".giscus")?.appendChild(script);
+    })();
+</script>
