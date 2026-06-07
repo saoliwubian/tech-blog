@@ -1,15 +1,10 @@
-name: AI Daily Report
+name: Tech Daily Report
 
 on:
   schedule:
-    # UTC 4:00 = Beijing 12:00
+    # UTC 4:00 = 北京时间 12:00, generate daily tech report
     - cron: '0 4 * * *'
   workflow_dispatch:
-    inputs:
-      date:
-        description: 'Override date (YYYY-MM-DD), leave empty for today'
-        required: false
-        default: ''
 
 permissions:
   contents: write
@@ -31,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Generate AI Daily Report
+      - name: Generate Tech Daily Report
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
@@ -55,5 +50,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/ai-daily/
-          git commit -m "ai-daily: Add $(date -u -d '+8 hours' +%Y-%m-%d) AI daily report [skip ci]"
+          git commit -m "tech-daily: Add $(date -u -d '+8 hours' +%Y-%m-%d) tech daily report [skip ci]"
           git push
