@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>科技日报 2026-06-07 — TechPulse</title>
-  <meta name="description" content="2026-06-07 科技资讯日报：苹果WWDC 2026预览——Gemini驱动Siri重构，Tim Cook告别主题演讲；Anthropic警告自我改进AI即将到来" />
+  <meta name="description" content="2026-06-07 科技资讯日报：OpenAI 推出 Lockdown Mode，为 ChatGPT 敏感数据筑起反提示注入防线" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 </head>
@@ -14,7 +14,7 @@
       <div class="masthead-title">TechPulse Tech Daily</div>
       <div class="masthead-subtitle">科技资讯日报</div>
       <div class="masthead-meta">
-        <span class="masthead-edition">第 003 期</span>
+        <span class="masthead-edition">第 004 期</span>
         <span>2026 年 06月07日 · 星期日</span>
         <div class="masthead-nav">
           <a href="index.html">← 目录</a>
@@ -25,12 +25,12 @@
 
     <section class="headline">
       <div class="headline-label">📰 头条</div>
-      <h1 class="headline-title">苹果 WWDC 2026 预览：Gemini 驱动 Siri 彻底重构，Tim Cook 告别最后一场主题演讲</h1>
+      <h1 class="headline-title">OpenAI 推出 Lockdown Mode，为 ChatGPT 敏感数据筑起反提示注入防线</h1>
       <div class="headline-body">
-        苹果将于 <strong>6 月 8 日（周一）</strong> 召开 WWDC 2026 开发者大会，这将是 <strong>Tim Cook 作为 CEO 的最后一场 WWDC 主题演讲</strong>（他将于 9 月 1 日将职位交给硬件主管 John Ternus）。本次大会最重磅的 AI 消息是：<strong>Siri 将彻底重构</strong>，底层由 <strong>Google Gemini 定制版 1.2 万亿参数模型</strong> 驱动，授权费约 <strong>每年 10 亿美元</strong>——这是 Gemini 在 Google 自家产品之外最大的商业部署。苹果还将推出 <strong>Extensions 系统</strong>，允许用户在 ChatGPT、Gemini 或 Claude 之间自由选择作为 Apple Intelligence 的 AI 引擎，默认使用 Gemini，<strong>终结了自 iOS 18 以来 OpenAI 在 iPhone 上的独占地位</strong>。这场"AI 战争中的瑞士"战略，标志着苹果选择了不自研前沿模型、而是通过开放生态和多供应商策略来参与 AI 竞争的全新路径。
+        OpenAI 开始为符合条件的个人账户推出 <strong>Lockdown Mode</strong>，旨在降低提示注入攻击导致的数据外泄风险。该模式会限制 ChatGPT 对工具和外部资源的访问，即使攻击者成功注入恶意提示，<strong>敏感数据被泄露的可能性也会大幅降低</strong>。这一功能主要面向处理敏感数据的个人与组织，是对近期多起 AI 代理被滥用于盗取账户事件的直接回应——此前攻击者曾利用 Meta 的 AI 客服代理成功劫持 Instagram 账号。尽管 Lockdown Mode 无法完全杜绝提示注入，但 OpenAI 表示其目标是<strong>减少数据在交互过程中被共享的途径</strong>，为高风险场景提供更严格的安全保障。
       </div>
       <div class="headline-source">
-        来源：<a href="https://techcabal.com/2026/06/06/apple-wwdc-2026-what-to-expect/" target="_blank" rel="noopener">TechCabal</a> · <a href="https://www.techtimes.com/articles/317902/20260606/wwdc-2026-opens-monday-gemini-powers-rebuilt-siri-iphone-11-faces-ios-27-cut.htm" target="_blank" rel="noopener">TechTimes</a> · <a href="https://macdailynews.com/2026/06/05/apples-big-ai-redemption-at-wwdc-2026-overhauled-siri-ios-27-macos-27-and-more-set-for-reveal-on-monday/" target="_blank" rel="noopener">MacDailyNews</a>
+        来源：<a href="https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/" target="_blank" rel="noopener">TechCrunch</a>
       </div>
     </section>
 
@@ -38,114 +38,96 @@
       <div class="section-header">
         <span class="section-icon">🔍</span>
         <h2 class="section-title">重点分析</h2>
-        <span class="section-count">6 条</span>
+        <span class="section-count">5 条</span>
       </div>
       <div class="analysis-card">
         <div class="analysis-card-header">
           <span class="analysis-index">#1</span>
-          <h3 class="analysis-title">Anthropic 发出"刹车踏板"警告：自我改进 AI 即将到来，行业安全框架亟需重建</h3>
+          <h3 class="analysis-title">Railway 获 1 亿美元融资，以 AI 原生云基础设施挑战 AWS</h3>
         </div>
         <div class="analysis-body">
-          Anthropic 本周发出罕见的公开警告，称其 AI 系统进展如此迅速，可能很快具备 <strong>无需人类监督的自我改进能力</strong>，并敦促整个 AI 行业开发所谓的 <strong>"刹车踏板"</strong>——一套能够在 AI 系统开始以人类无法监控的速度自我改进时减缓或停止其运行的技术保障措施。核心关切在于：当前的安全评估框架是为<strong>每隔数月迭代一次的模型</strong>设计的，而能够在部署期间更新自身权重或架构的自我改进模型，代表了<strong>根本不同的风险特征</strong>。在 Anthropic 正以 9650 亿美元估值推进 IPO 之际发出此警告，其公关效果颇为复杂——一边寻求万亿级估值，一边警告 AI 可能失控，折射出 AI 行业"加速与刹车"的深层矛盾。
+          旧金山云平台 Railway 在未花费一分钱营销的情况下已吸引 <strong>200 万开发者</strong>，近日宣布完成 <strong>1 亿美元 Series B 融资</strong>。Railway 主打 AI 原生基础设施，简化部署流程，允许开发者从代码直接到可扩展服务，无需管理复杂云资源。在 AI 应用需求激增的背景下，这家初创公司正试图用<strong>开发者体验优先</strong>的策略冲击 AWS 等巨头的主导地位，其快速增长的社区验证了“无营销增长”模式的可行性。
         </div>
         <div class="analysis-tags">
           <span class="tag severity-high">🔥 高影响</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">自我改进</span>
-          <span class="tag">Anthropic</span>
+          <span class="tag">云计算</span>
+          <span class="tag">AI基础设施</span>
+          <span class="tag">融资</span>
         </div>
         <div class="analysis-source">
-          来源：<a href="https://www.notus.org/technology/trump-ai-stake-openai" target="_blank" rel="noopener">NOTUS</a> · <a href="https://www.cnbc.com/2026/06/05/trump-open-ai-altman-stake.html" target="_blank" rel="noopener">CNBC</a>
+          来源：<a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener">VentureBeat</a>
         </div>
       </div>
       <div class="analysis-card">
         <div class="analysis-card-header">
           <span class="analysis-index">#2</span>
-          <h3 class="analysis-title">SpaceX IPO 路演第一周完成：6 月 11 日定价，史上最大规模上市在即</h3>
+          <h3 class="analysis-title">Google 搜索框 25 年来首次重新设计，搜索范式转向 AI 对话</h3>
         </div>
         <div class="analysis-body">
-          SpaceX 的 IPO 路演于 6 月 6 日完成第一周，投资者会议在纽约、波士顿和旧金山举行。由高盛牵头的 <strong>21 家银行承销团</strong> 正向机构投资者推介其财务数据。<strong>关键数据</strong>：2025 年合并营收（含 xAI）<strong>187 亿美元</strong>，其中 Starlink 贡献 114 亿美元营收和 44 亿美元营业利润，是唯一盈利板块；xAI 消耗约 140 亿美元现金、产生 32 亿美元营收——AI 部门净现金消耗 <strong>108 亿美元</strong>。定价定于 <strong>6 月 11 日</strong>，股票代码 <strong>SPCX</strong>，6 月 12 日在纳斯达克交易，目标融资 750 亿美元，估值超 1.75 万亿美元。30% 的股票将通过 Robinhood、Fidelity 和嘉信理财分配给散户投资者——是标准大型 IPO 的 <strong>3 倍</strong>，有望超越沙特阿美成为史上最大 IPO。
+          Google 将在年度大会上正式退役沿用 25 年的传统搜索框，转向以 <strong>AI 驱动的对话式界面</strong>。新设计不再仅返回蓝色链接列表，而是整合多轮对话、上下文理解和动态生成答案，标志着搜索引擎从“关键词匹配”向<strong>意图理解与任务完成</strong>的根本转变。这一变化对 SEO、内容生态和用户信息获取习惯都将产生深远影响，也被视为 Google 应对 AI 搜索挑战者的关键防御与进攻。
         </div>
         <div class="analysis-tags">
           <span class="tag severity-high">🔥 高影响</span>
-          <span class="tag">IPO</span>
-          <span class="tag">SpaceX</span>
-          <span class="tag">纳斯达克</span>
+          <span class="tag">AI</span>
+          <span class="tag">搜索</span>
+          <span class="tag">用户体验</span>
         </div>
         <div class="analysis-source">
-          来源：<a href="https://new.qq.com/rain/a/20260604A07ZAJ00" target="_blank" rel="noopener">腾讯新闻</a> · <a href="https://www.fastcompany.com/91553827/look-biggest-ai-players-barreling-towards-huge-wall-street-debuts" target="_blank" rel="noopener">Fast Company</a>
+          来源：<a href="https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think" target="_blank" rel="noopener">VentureBeat</a>
         </div>
       </div>
       <div class="analysis-card">
         <div class="analysis-card-header">
           <span class="analysis-index">#3</span>
-          <h3 class="analysis-title">特朗普与桑德斯罕见趋同：左右两派同时提出政府持股 AI 公司</h3>
+          <h3 class="analysis-title">jQuery 4.0.0 正式发布，20 周年里程碑带来多项改进</h3>
         </div>
         <div class="analysis-body">
-          6 月 6 日，特朗普总统对记者表示美国政府可能<strong>直接持有 OpenAI、Anthropic、xAI 等 AI 巨头的股权</strong>，称"让他们成为这场革命的合作伙伴将是一件美好的事"。就在几天前，参议员伯尼·桑德斯提出《美国 AI 主权财富基金法案》，提议对前沿 AI 公司<strong>一次性征收 50% 股权税</strong>，纳入联邦主权财富基金。左翼民主社会主义者与右翼民粹主义者正用不同语言描述同一政策结果。背后，Sam Altman 自 2025 年初起就私下与特朗普政府讨论政府股权参与方案。在三大 AI 公司竞相 IPO 之际，<strong>AI 国有化讨论</strong> 正为上市环境增添前所未有的政治复杂度。
+          jQuery 4.0.0 正式版在库诞生 20 周年之际发布，历经长期开发与多个预发布版本。新版本移除了对 <strong>IE<11 的支持</strong>，进行了测试基础设施重写，并带来大量 <strong>bug 修复、性能优化</strong> 及少量破坏性变更。尽管现代前端框架已大幅取代 jQuery，但仍有大量存量项目依赖它，此次更新为这些项目提供了更轻量、更安全的升级路径，延续了 jQuery 对 Web 的深远影响。
         </div>
         <div class="analysis-tags">
           <span class="tag severity-medium">⚡ 中影响</span>
-          <span class="tag">AI政策</span>
-          <span class="tag">政府监管</span>
-          <span class="tag">政治</span>
+          <span class="tag">前端</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">开源</span>
         </div>
         <div class="analysis-source">
-          来源：<a href="https://fortune.com/2026/06/05/trump-partnership-openai-anthropic-xai-nationalization-bernie-sanders-altman/" target="_blank" rel="noopener">Fortune</a> · <a href="https://gizmodo.com/bernie-sanders-continues-to-be-only-democrat-willing-to-govern-on-ai-proposes-public-ownership-2000765960" target="_blank" rel="noopener">Gizmodo</a>
+          来源：<a href="https://blog.jquery.com/2026/01/17/jquery-4-0-0/" target="_blank" rel="noopener">jQuery Blog</a>
         </div>
       </div>
       <div class="analysis-card">
         <div class="analysis-card-header">
           <span class="analysis-index">#4</span>
-          <h3 class="analysis-title">xAI 全面出击：Grok Build 编码代理、联邦政府合同、企业连接器三线推进</h3>
+          <h3 class="analysis-title">AI 代理自主发现 FFmpeg 21 个零日漏洞，Chrome 同步修复 429 个 Bug</h3>
         </div>
         <div class="analysis-body">
-          xAI 本周在三条战线同时推进：1）推出 <strong>Grok Build</strong>——基于终端的编码代理（早期 Beta），支持并行子代理、worktree 和无头模式，直接挑战 Claude Code 和 GitHub Copilot，使 AI 编码代理市场形成<strong>五大玩家格局</strong>（Claude Code、Codex、Copilot、Gemini Code、Grok Build）；2）与美国总务管理局签署 <strong>18 个月 OneGov 协议</strong>，每个联邦机构仅 <strong>$0.42</strong> 即可使用 Grok 4；3）推出 Grok Web <strong>Connectors</strong>，深度集成 SharePoint、Outlook、Google Workspace、Notion 等企业应用，并支持 MCP 协议实现跨生态互操作。xAI 正从模型实验室转型为完整企业 AI 技术栈。
+          一家安全初创公司报告其 <strong>自主 AI 代理</strong> 在广泛使用的媒体库 FFmpeg 中发现了 <strong>21 个先前未知的漏洞</strong>，同时 Google 发布 Chrome 149 修复了 <strong>429 个 Bug</strong>。AI 驱动的漏洞发现正从辅助工具升级为完全自主的安全研究员，大幅缩短了漏洞发现与修复周期。这一趋势预示着软件安全测试将进入 <strong>AI 自动化时代</strong>，但也带来漏洞披露与滥用的新挑战。
         </div>
         <div class="analysis-tags">
-          <span class="tag severity-medium">⚡ 中影响</span>
-          <span class="tag">xAI</span>
-          <span class="tag">编码代理</span>
-          <span class="tag">政府合同</span>
+          <span class="tag severity-high">🔥 高影响</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">漏洞发现</span>
+          <span class="tag">Chrome</span>
         </div>
         <div class="analysis-source">
-          来源：<a href="https://tech.yahoo.com/ai/gemini/articles/elon-musks-grok-ai-used-202629636.html" target="_blank" rel="noopener">Tom's Hardware</a> · <a href="https://releasebot.io/updates/xai" target="_blank" rel="noopener">Releasebot (xAI)</a>
+          来源：<a href="https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html" target="_blank" rel="noopener">The Hacker News</a>
         </div>
       </div>
       <div class="analysis-card">
         <div class="analysis-card-header">
           <span class="analysis-index">#5</span>
-          <h3 class="analysis-title">美国《伟大 AI 法案》269 页草案出炉：三年联邦优先权引发工会与各州强烈反对</h3>
+          <h3 class="analysis-title">纽约州通过全州首个大型数据中心一年禁令</h3>
         </div>
         <div class="analysis-body">
-          6 月 4 日，美国众议院两党议员联合公布了一份长达 <strong>269 页</strong> 的 AI 立法讨论稿——《伟大美国 AI 法案》（Great American AI Act）。核心条款包括：对州级 AI 法律实施 <strong>三年联邦优先权</strong>，要求年收入超 5 亿美元的大型 AI 公司发布前沿 AI 框架、报告关键安全事件、允许审计网络安全计划，以及设立每年 1 亿美元联邦 AI 标准中心。但 AFL-CIO、AFT 等工会组织已联合拒绝该法案，称其为 <strong>"对 AI 行业的赠礼"</strong>。更紧迫的是，科罗拉多州首个综合性州级 AI 法律将于 <strong>6 月 30 日生效</strong>（仅剩 23 天），联邦优先权条款可能在其生效前将其冻结。
+          纽约州议会通过了一项 <strong>为期一年的大型数据中心暂停令</strong>，若州长签署将成为全美首个全州范围的数据中心禁令。立法者表示此举旨在为政策制定者争取时间，评估大型数据中心对<strong>电网、环境与社区</strong>的影响。此前印第安纳州 Shelbyville 也因 20 亿美元数据中心项目引发政治争议，市长的不当言论进一步激化矛盾。数据中心的快速扩张正面临越来越强的社会与监管阻力。
         </div>
         <div class="analysis-tags">
           <span class="tag severity-medium">⚡ 中影响</span>
-          <span class="tag">AI立法</span>
-          <span class="tag">美国国会</span>
-          <span class="tag">政策监管</span>
+          <span class="tag">数据中心</span>
+          <span class="tag">政策</span>
+          <span class="tag">能源</span>
         </div>
         <div class="analysis-source">
-          来源：<a href="https://www.dlapiper.com/insights/publications/2026/06/unpacking-the-great-american-ai-act" target="_blank" rel="noopener">DLA Piper</a> · <a href="https://www.pconline.com.cn/ai/2166/21669011.html" target="_blank" rel="noopener">太平洋科技</a>
-        </div>
-      </div>
-      <div class="analysis-card">
-        <div class="analysis-card-header">
-          <span class="analysis-index">#6</span>
-          <h3 class="analysis-title">OpenAI GPT-Rosalind 生命科学 AI 更新：token 效率提升 31%，精准度超越前代</h3>
-        </div>
-        <div class="analysis-body">
-          OpenAI 于 6 月 4 日发布了 <strong>GPT-Rosalind 更新版</strong>，专为企业级生命科学研究打造。该更新结合 GPT-5.5 的代理编码和工具使用能力，在药物发现核心领域（药物化学、基因组学、蛋白质组学、空间转录组学）实现更强智能。关键基准：在 GeneBench（长周期端到端基因组分析）上，更新版使用的 <strong>token 比 GPT-5.5 少 31%</strong>，同时准确率更高（21.6% vs 20.4%）。OpenAI 还推出了 <strong>Rosalind Biodefense 计划</strong>，专门为大流行防范和生物安全威胁识别扩大可信访问范围。这一生命科学专用 AI 路线与 Anthropic 聚焦网络安全的 Project Glasswing 形成差异化竞争。
-        </div>
-        <div class="analysis-tags">
-          <span class="tag severity-low">💡 低影响</span>
-          <span class="tag">生物科技</span>
-          <span class="tag">OpenAI</span>
-          <span class="tag">科学AI</span>
-        </div>
-        <div class="analysis-source">
-          来源：<a href="https://openai.com/research/index/release/" target="_blank" rel="noopener">OpenAI Research</a>
+          来源：<a href="https://www.theverge.com/policy/944041/new-york-data-center-moratorium" target="_blank" rel="noopener">The Verge</a>
         </div>
       </div>
     </section>
@@ -159,23 +141,23 @@
       <div class="quick-glance">
         <div class="quick-item">
           <span class="quick-bullet">▸</span>
-          <span>OpenAI 前沿模型正式登陆 AWS，企业客户可通过 Bedrock 同时访问 GPT 和 Claude，AI 多云时代加速到来。</span>
-          <span class="quick-source"><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI News</a></span>
+          <span>Meta 独立 AI 应用推出“For You”版块，用 AI 生成点击诱饵式新闻故事，引发内容质量担忧。</span>
+          <span class="quick-source"><a href="https://www.theverge.com/ai-artificial-intelligence/944235/meta-app-ai-clickbait-articles" target="_blank" rel="noopener">The Verge</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">▸</span>
-          <span>Rust 1.96.0 发布：稳定 core::range 新 Range 类型与 assert_matches! 宏，Cargo 同步修复安全漏洞。</span>
-          <span class="quick-source"><a href="https://rustcc.cn/article?id=9765251a-a3f9-4424-be9c-1f2c82338b1b" target="_blank" rel="noopener">Rust 中文社区</a></span>
+          <span>Salesforce 全面重构 Slackbot，将其升级为可执行任务的 AI 代理，加剧与 Microsoft、Google 在职场 AI 的竞争。</span>
+          <span class="quick-source"><a href="https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and" target="_blank" rel="noopener">VentureBeat</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">▸</span>
-          <span>DriveNets 获 4.1 亿美元 D 轮融资，AI 网络基础设施赛道持续升温，在手业务超 10 亿美元。</span>
-          <span class="quick-source"><a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/" target="_blank" rel="noopener">TechStartups</a></span>
+          <span>Kubernetes 官方博客宣布 Dashboard 将逐步过渡到 Headlamp，提供更现代、可扩展的集群可视化方案。</span>
+          <span class="quick-source"><a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp/" target="_blank" rel="noopener">Kubernetes Blog</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">▸</span>
-          <span>Tripo AI 获近 2 亿美元 A+ 轮融资，推进 3D 世界模型 "Project Eden" 研究，AI 空间智能成为新风口。</span>
-          <span class="quick-source"><a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/" target="_blank" rel="noopener">TechStartups</a></span>
+          <span>Hugging Face 设计面向代理优化的 CLI，使 AI 代理能更高效地与 Hub 交互和操作模型资源。</span>
+          <span class="quick-source"><a href="https://huggingface.co/blog/hf-cli-for-agents" target="_blank" rel="noopener">Hugging Face Blog</a></span>
         </div>
       </div>
     </section>
@@ -187,28 +169,28 @@
         <span class="section-count">2 张</span>
       </div>
       <div class="viz-container">
-        <div class="viz-title">2026 AI 三大 IPO 估值对比（单位：亿美元）</div>
+        <div class="viz-title">近期云基础设施初创融资对比</div>
         <div class="mermaid">
 xychart-beta
-    title "AI 三巨头 IPO 估值对比"
-    x-axis ["SpaceX", "Anthropic", "OpenAI"]
-    y-axis "估值（亿美元）" 0 --> 20000
-    bar [17500, 9650, 8520]
+    title "融资额（百万美元）"
+    x-axis ["Railway", "Listen Labs"]
+    y-axis "金额" 0 --> 110
+    bar [100, 69]
         </div>
       </div>
       <div class="viz-container">
-        <div class="viz-title">今日 AI 治理政策博弈格局</div>
+        <div class="viz-title">Lockdown Mode 工作流</div>
         <div class="mermaid">
-flowchart TB
-    A[美国 AI 治理格局] --> B[联邦层面]
-    A --> C[州层面]
-    B --> D["《伟大AI法案》269页草案<br/>▲ 三年联邦优先权<br/>▲ 大公司安全审计<br/>▲ 每年1亿$标准中心"]
-    B --> E["桑德斯AI主权基金<br/>▲ 50%股权税<br/>▲ 公众持股表决权"]
-    B --> F["特朗普AI国有化<br/>▲ 政府直接持股<br/>▲ 与Altman秘密谈判"]
-    C --> G["科罗拉多AI法<br/>⚡ 6月30日生效<br/>⚡ 或被联邦优先权冻结"]
-    D -.->|可能覆盖| G
-    E -.->|目标| H[OpenAI / Anthropic / xAI]
-    F -.->|目标| H
+flowchart TD
+    A[用户输入提示] --> B{是否启用 Lockdown Mode?}
+    B -- 否 --> C[正常执行，可调用工具/外部API]
+    B -- 是 --> D[限制工具访问]
+    D --> E[仅允许安全上下文内操作]
+    E --> F[阻止数据外发请求]
+    F --> G[返回受限但安全的响应]
+    C --> H[正常响应]
+    H --> I[潜在数据泄露风险]
+    G --> J[降低数据外泄可能]
         </div>
       </div>
     </section>
@@ -221,67 +203,43 @@ flowchart TB
       <div class="quick-glance">
         <div class="quick-item">
           <span class="quick-bullet">1.</span>
-          <span><a href="https://techcabal.com/2026/06/06/apple-wwdc-2026-what-to-expect/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">TechCabal — Apple WWDC 2026 Preview</a></span>
+          <span><a href="https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">TechCrunch</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">2.</span>
-          <span><a href="https://www.techtimes.com/articles/317902/20260606/wwdc-2026-opens-monday-gemini-powers-rebuilt-siri-iphone-11-faces-ios-27-cut.htm" target="_blank" rel="noopener" style="color:var(--accent-cyan);">TechTimes — WWDC 2026 Gemini Siri</a></span>
+          <span><a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank" rel="noopener" style="color:var(--accent-cyan);">VentureBeat</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">3.</span>
-          <span><a href="https://macdailynews.com/2026/06/05/apples-big-ai-redemption-at-wwdc-2026-overhauled-siri-ios-27-macos-27-and-more-set-for-reveal-on-monday/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">MacDailyNews</a></span>
+          <span><a href="https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think" target="_blank" rel="noopener" style="color:var(--accent-cyan);">VentureBeat</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">4.</span>
-          <span><a href="https://fortune.com/2026/06/05/trump-partnership-openai-anthropic-xai-nationalization-bernie-sanders-altman/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Fortune — Trump AI Ownership</a></span>
+          <span><a href="https://blog.jquery.com/2026/01/17/jquery-4-0-0/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">jQuery Blog</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">5.</span>
-          <span><a href="https://gizmodo.com/bernie-sanders-continues-to-be-only-democrat-willing-to-govern-on-ai-proposes-public-ownership-2000765960" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Gizmodo — Sanders AI Bill</a></span>
+          <span><a href="https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html" target="_blank" rel="noopener" style="color:var(--accent-cyan);">The Hacker News</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">6.</span>
-          <span><a href="https://www.notus.org/technology/trump-ai-stake-openai" target="_blank" rel="noopener" style="color:var(--accent-cyan);">NOTUS — Government AI Stake</a></span>
+          <span><a href="https://www.theverge.com/policy/944041/new-york-data-center-moratorium" target="_blank" rel="noopener" style="color:var(--accent-cyan);">The Verge</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">7.</span>
-          <span><a href="https://www.cnbc.com/2026/06/05/trump-open-ai-altman-stake.html" target="_blank" rel="noopener" style="color:var(--accent-cyan);">CNBC — Trump OpenAI Stake</a></span>
+          <span><a href="https://www.theverge.com/ai-artificial-intelligence/944235/meta-app-ai-clickbait-articles" target="_blank" rel="noopener" style="color:var(--accent-cyan);">The Verge</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">8.</span>
-          <span><a href="https://tech.yahoo.com/ai/gemini/articles/elon-musks-grok-ai-used-202629636.html" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Tom's Hardware — Grok Government</a></span>
+          <span><a href="https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and" target="_blank" rel="noopener" style="color:var(--accent-cyan);">VentureBeat</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">9.</span>
-          <span><a href="https://releasebot.io/updates/xai" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Releasebot — xAI Updates</a></span>
+          <span><a href="https://kubernetes.io/blog/2026/06/01/dashboard-to-headlamp/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Kubernetes Blog</a></span>
         </div>
         <div class="quick-item">
           <span class="quick-bullet">10.</span>
-          <span><a href="https://www.dlapiper.com/insights/publications/2026/06/unpacking-the-great-american-ai-act" target="_blank" rel="noopener" style="color:var(--accent-cyan);">DLA Piper — Great American AI Act</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">11.</span>
-          <span><a href="https://www.pconline.com.cn/ai/2166/21669011.html" target="_blank" rel="noopener" style="color:var(--accent-cyan);">太平洋科技 — AI法案</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">12.</span>
-          <span><a href="https://openai.com/research/index/release/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">OpenAI Research — Rosalind</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">13.</span>
-          <span><a href="https://openai.com/news/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">OpenAI News — AWS</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">14.</span>
-          <span><a href="https://rustcc.cn/article?id=9765251a-a3f9-4424-be9c-1f2c82338b1b" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Rust 中文社区</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">15.</span>
-          <span><a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/" target="_blank" rel="noopener" style="color:var(--accent-cyan);">TechStartups — Funding Roundup</a></span>
-        </div>
-        <div class="quick-item">
-          <span class="quick-bullet">16.</span>
-          <span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" target="_blank" rel="noopener" style="color:var(--accent-cyan);">BuildFastWithAI — June 7 AI News</a></span>
+          <span><a href="https://huggingface.co/blog/hf-cli-for-agents" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Hugging Face Blog</a></span>
         </div>
       </div>
     </section>
