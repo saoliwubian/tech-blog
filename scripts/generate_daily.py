@@ -425,7 +425,7 @@ def render_html(report: dict, issue_number: int) -> str:
         <span>{YEAR} 年 {MONTH_DAY} · 星期{WEEKDAY}</span>
         <div class="masthead-nav">
           <a href="index.html">← 目录</a>
-          <a href="/">博客</a>
+          <a href="/tech-blog/">博客</a>
         </div>
       </div>
     </header>
@@ -442,7 +442,7 @@ def render_html(report: dict, issue_number: int) -> str:
 
     <div class="report-footer">
       <p>本文由 AI 自动搜索、筛选、整理生成 · 内容仅供参考</p>
-      <p><a href="index.html">← 返回日报目录</a> · <a href="/">返回博客</a></p>
+      <p><a href="index.html">← 返回日报目录</a> · <a href="/tech-blog/">返回博客</a></p>
     </div>
   </div>
 
