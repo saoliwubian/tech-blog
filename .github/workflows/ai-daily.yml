@@ -57,5 +57,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/ai-daily/
-          git commit -m "tech-daily: Add $(date -u -d '+8 hours' +%Y-%m-%d) tech daily report [skip ci]"
+          git commit -m "tech-daily: Add $(date -u -d '+8 hours' +%Y-%m-%d) tech daily report"
           git push
