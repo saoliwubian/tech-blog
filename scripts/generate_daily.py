@@ -142,7 +142,7 @@ def fetch_all_rss() -> list[dict]:
 
 
 def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 4096) -> str:
-    """Call OpenAI-compatible LLM API."""
+    """Call OpenAI-compatible LLM API with retry logic."""
     import urllib.request
     import urllib.error
 
@@ -157,18 +157,23 @@ def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 4096) -> st
         "temperature": 0.7,
     }).encode("utf-8")
 
-    req = urllib.request.Request(url, data=payload, headers={
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {LLM_API_KEY}",
-    })
-
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data["choices"][0]["message"]["content"]
-    except Exception as e:
-        print(f"[ERROR] LLM API call failed: {e}", file=sys.stderr)
-        raise
+    # Try up to 3 times with increasing timeouts
+    for attempt in range(3):
+        try:
+            timeout = [180, 300, 600][attempt]  # 3min, 5min, 10min
+            if attempt > 0:
+                print(f"  [Retry {attempt + 1}/3] with timeout={timeout}s")
+            req = urllib.request.Request(url, data=payload, headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {LLM_API_KEY}",
+            })
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                return data["choices"][0]["message"]["content"]
+        except Exception as e:
+            print(f"  [WARN] Attempt {attempt + 1}/3 failed: {e}", file=sys.stderr)
+            if attempt == 2:
+                raise
 
 
 def generate_report(articles: list[dict]) -> dict:

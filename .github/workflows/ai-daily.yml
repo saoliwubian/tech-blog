@@ -2,9 +2,16 @@ name: Tech Daily Report
 
 on:
   schedule:
-    # UTC 4:00 = 北京时间 12:00, generate daily tech report
+    # UTC 4:00 = 北京时间 12:00, primary run
     - cron: '0 4 * * *'
+    # UTC 6:00 = 北京时间 14:00, backup run (if primary delayed/missed)
+    - cron: '0 6 * * *'
   workflow_dispatch:
+    inputs:
+      date:
+        description: 'Override date (YYYY-MM-DD), leave empty for today'
+        required: false
+        default: ''
 
 permissions:
   contents: write
