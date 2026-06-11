@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Triggered when the daily report workflow completes (needed because GITHUB_TOKEN pushes don't chain)
+  workflow_run:
+    workflows: ["Tech Daily Report"]
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
