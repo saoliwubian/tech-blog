@@ -9,9 +9,10 @@ import {
 	setTheme,
 } from "@utils/setting-utils.ts";
 import { onMount } from "svelte";
-
-let {} = $props();
 import type { LIGHT_DARK_MODE } from "@/types/config.ts";
+
+// biome-ignore lint/correctness/noEmptyPattern: Required for Astro type checking with client:only directive
+let {} = $props();
 
 const seq: LIGHT_DARK_MODE[] = [LIGHT_MODE, DARK_MODE, AUTO_MODE];
 let mode: LIGHT_DARK_MODE = $state(AUTO_MODE);

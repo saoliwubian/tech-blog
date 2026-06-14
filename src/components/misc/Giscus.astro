@@ -1,14 +1,14 @@
 ---
 // Giscus 评论组件 - 基于 GitHub Discussions
 interface Props {
-  class?: string;
+	class?: string;
 }
 const { class: className = "" } = Astro.props;
 
 // Giscus 配置
 // 请替换为你自己的 GitHub 仓库信息
 const GISCUS_REPO = "saoliwubian/tech-blog";
-const GISCUS_REPO_ID = "";  // 需要填入实际的 repo ID
+const GISCUS_REPO_ID = ""; // 需要填入实际的 repo ID
 const GISCUS_CATEGORY = "Announcements";
 const GISCUS_CATEGORY_ID = ""; // 需要填入实际的 category ID
 ---
