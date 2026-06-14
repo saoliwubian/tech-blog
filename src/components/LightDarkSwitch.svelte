@@ -9,6 +9,8 @@ import {
 	setTheme,
 } from "@utils/setting-utils.ts";
 import { onMount } from "svelte";
+
+let {} = $props();
 import type { LIGHT_DARK_MODE } from "@/types/config.ts";
 
 const seq: LIGHT_DARK_MODE[] = [LIGHT_MODE, DARK_MODE, AUTO_MODE];
